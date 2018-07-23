@@ -1,0 +1,9 @@
+call plug#begin('~/.vim/plugged')
+
+" lean & mean status/tabline for vim that's light as air 
+" 状态栏增强插件
+Plug 'vim-airline/vim-airline'
+
+Plug 'Valloric/YouCompleteMe'
+
+call plug#end()
