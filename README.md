@@ -1,0 +1,1 @@
+Install: run ./install.sh
