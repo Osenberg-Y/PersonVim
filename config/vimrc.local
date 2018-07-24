@@ -117,3 +117,11 @@ function ClosePair(char)
     endif
 endf
 "括号自动补全
+
+" YCM configure
+let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"关闭加载.ycm_extra_conf.py提示
+let g:ycm_confirm_extra_conf=0 
+" C++ 
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'

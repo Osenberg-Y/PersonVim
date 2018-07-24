@@ -17,5 +17,11 @@ make VIMRUNTIMEDIR=/usr/local/share/vim/vim81
 sudo make install
 ln -s $Dir/config/vimrc $HOME/.vimrc
 
+# install plugin mannager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# install YCM plugin
+cd ~/.vim/plugged/YouCompleteMe
+./install.py --clang-completer --go-completer --js-completer --java-completer -system-libclang
+cp ~/.PersonVim/config/ycm_extra_conf.py ~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf
