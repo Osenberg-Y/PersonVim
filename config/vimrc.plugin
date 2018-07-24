@@ -3,7 +3,11 @@ call plug#begin('~/.vim/plugged')
 " lean & mean status/tabline for vim that's light as air 
 " 状态栏增强插件
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
+" 代码补全
 Plug 'Valloric/YouCompleteMe'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
