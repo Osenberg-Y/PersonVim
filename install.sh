@@ -25,6 +25,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 cd ~/.vim/plugged/YouCompleteMe
 ./install.py --clang-completer --go-completer --js-completer --java-completer -system-libclang
 cp ~/.PersonVim/config/ycm_extra_conf.py ~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf
+# Generate code flags for YCM (ctags -R *)
+sudo apt-get install ctags
 
 # NERD_Tree
 wget http://www.vim.org/scripts/download_script.php?src_id=17123 -O nerdtree.zip
