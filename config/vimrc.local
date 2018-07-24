@@ -91,6 +91,9 @@ set whichwrap=b,s,<,>,[,]
 filetype plugin indent on
 " 分为三部分命令：file on, file plugin on, file indent on.分别表示自动识别文件类型，用文件类型脚本，使用缩进定义文件。
 
+"共享剪切板
+set clipboard+=unnamed 
+
 "==================自定义的键映射======================
  
 vnoremap $1 <esc>`>a)<esc>`<i(<esc>
@@ -130,7 +133,6 @@ let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 " select theme
 " let g:airline_theme='angr'
 " 显示窗口tab和buffer
-" 顶部tab显示
 let g:airline#extensions#tabline#enabled=1 
 " 设置tab键映射
 nmap <tab> :bn<cr> 
@@ -170,3 +172,15 @@ map <F2> :NERDTreeToggle<CR>
 let NERDTreeWinPos="right"
 " 当打开 NERDTree 窗口时，自动显示 Bookmarks
 let NERDTreeShowBookmarks=1
+" 打开vim时如果没有文件自动打开NERDTree
+autocmd vimenter * if !argc()|NERDTree|endif
+
+" set taglist
+map <F3> ::TlistToggle<CR>              "按下 F3 调出/隐藏
+let Tlist_Ctags_Cmd='ctags'
+let Tlist_Show_One_File=1               "不同时显示多个文件的tag，只显示当前文件的
+let Tlist_WinWidt =28                   "设置taglist的宽度
+let Tlist_Exit_OnlyWindow=1             "如果taglist窗口是最后一个窗口，则退出vim
+"let Tlist_Use_Right_Window=1           "在右侧窗口中显示taglist窗口
+let Tlist_Use_Left_Windo =1             "在左侧窗口中显示taglist窗口
+let Tlist_Auto_Open=1
