@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " 代码补全
 Plug 'Valloric/YouCompleteMe'
+" 文件树
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-scripts/taglist.vim'
@@ -16,9 +17,9 @@ Plug 'tenfyzhong/CompleteParameter.vim'
 
 " indexer
 " indexer插件可以针对不同的工程目录自动地生成、更新和引入不同的tags文件
-" 它需要依赖DfrankUtil和Vimprj 两个插件]
-" Plug 'vim-scripts/DfrankUtil'
-" Plug 'vim-scripts/vimprj'
-" Plug 'vim-scripts/indexer.tar.gz'
+" 它需要依赖DfrankUtil和Vimprj 两个插件
+"Plug 'vim-scripts/DfrankUtil'
+"Plug 'vim-scripts/vimprj'
+"Plug 'vim-scripts/indexer.tar.gz'
 
 call plug#end()
