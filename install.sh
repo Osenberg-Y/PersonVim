@@ -1,8 +1,10 @@
 #! /bin/sh
 
-Dir=$HOME/.PersonVim
-mkdir $Dir
+ProDir=$HOME/.PersonVim
+mkdir $ProDir
+Dir=`pwd`
 cd $Dir
+cp -Rf $Dir/* $ProDir
 git clone https://github.com/vim/vim.git
 cd vim
 
@@ -28,16 +30,22 @@ cd vim
 		--enable-gui=gtk2 --enable-cscope --prefix=/usr
 make VIMRUNTIMEDIR=/usr/share/vim/vim81
 sudo make install
-cd -
-ln -s $Dir/config/vimrc $HOME/.vimrc
+rm $HOME/.vimrc
+ln -s $ProDir/config/vimrc $HOME/.vimrc
+sudo ln -s /usr/bin/vim /usr/bin/vi
 
 # install plugin mannager
+rm -Rf $HOME/.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mkdir $HOME/.vim/plugged
 
 # install YCM plugin
-cd ~/.vim/plugged/YouCompleteMe
-./install.py --clang-completer --go-completer --js-completer --java-completer -system-libclang
-cp ~/.PersonVim/config/ycm_extra_conf.py ~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf
+cd $HOME/.vim/plugged
+git clone https://github.com/Valloric/YouCompleteMe.git
+cd $HOME/.vim/plugged/YouCompleteMe
+git submodule update --init --recursive
+./install.py --clang-completer
+cp $ProDir/config/ycm_extra_conf.py ~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf
 # Ctags
 sudo apt-get install ctags
