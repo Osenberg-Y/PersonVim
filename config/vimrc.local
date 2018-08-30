@@ -13,8 +13,12 @@ set tabstop=2
 " Tab键的宽度
 set softtabstop=2
 set shiftwidth=2
-"  统一缩进为4
-set noexpandtab
+"  统一缩进为2
+set expandtab
+set list
+set listchars=tab:▸-,eol:↩︎,trail:-
+" 用 space 替代 tab 的输入
+" set noexpandtab
 " 不要用空格代替制表符
 "set number
 " 显示行号
@@ -93,6 +97,10 @@ function ClosePair(char)
     endif
 endf
 "括号自动补全
+
+" syntastic-checker
+let g:syntastic_cpp_cpplint_exec = "cpplint"
+let g:syntastic_cpp_checkers = ['cpplint']
 
 " YCM configure
 let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
