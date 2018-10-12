@@ -99,8 +99,19 @@ endf
 "括号自动补全
 
 " syntastic-checker
-let g:syntastic_cpp_cpplint_exec = "cpplint"
-let g:syntastic_cpp_checkers = ['cpplint']
+let g:syntastic_cpp_cpplint_exec = 'cpplint'
+let g:syntastic_cpp_checkers = ['cpplint', 'gcc']
+" 设置 cpplint 的错误级别阈值（默认是 5），级别低于这一设置的不会显示
+let g:syntastic_cpp_cpplint_thres = 1
+" 设置 错误聚合 ，才能同时显示两个 checker 的错误
+let syntastic_aggregate_errors = 1
+
+" 设置分别是语法错误标识、语法警告标识、风格错误标识、风格警告标识：
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_style_error_symbol = '!'
+let g:syntastic_style_warning_symbol = '?'
+
 
 " YCM configure
 let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
