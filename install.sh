@@ -1,7 +1,7 @@
 #! /bin/sh
 
 ProDir=$HOME/.PersonVim
-mkdir $ProDir
+mkdir -p $ProDir
 Dir=`pwd`
 cd $Dir
 cp -Rf $Dir/* $ProDir
@@ -9,6 +9,7 @@ cp -Rf $Dir/* $ProDir
 sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
 	libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
 	libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
+sudo apt-get install curl
 sudo apt-get remove -y vim vim-runtime gvim
 sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox
 
@@ -36,7 +37,7 @@ sudo ln -s /usr/bin/vim /usr/bin/vi
 rm -Rf $HOME/.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-mkdir $HOME/.vim/plugged
+mkdir -p $HOME/.vim/plugged
 
 # install YCM plugin
 cd $HOME/.vim/plugged
