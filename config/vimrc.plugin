@@ -16,7 +16,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tenfyzhong/CompleteParameter.vim'
 
 " Syntastic Vim 中的语法检查框架
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " indexer
 " indexer插件可以针对不同的工程目录自动地生成、更新和引入不同的tags文件
