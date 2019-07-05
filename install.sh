@@ -9,7 +9,7 @@ cp -Rf $Dir/* $ProDir
 sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
 	libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
 	libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
-sudo apt-get install curl
+sudo apt-get install -y curl
 sudo apt-get remove -y vim vim-runtime gvim
 sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox
 
@@ -47,4 +47,4 @@ git submodule update --init --recursive
 ./install.py --clang-completer
 cp $ProDir/config/ycm_extra_conf.py ~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf
 # Ctags
-sudo apt-get install ctags
+sudo apt-get install -y ctags
