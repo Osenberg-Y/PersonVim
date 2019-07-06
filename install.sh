@@ -40,11 +40,11 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 mkdir -p $HOME/.vim/plugged
 
 # install YCM plugin
-cd $HOME/.vim/plugged
-git clone https://github.com/Valloric/YouCompleteMe.git
-cd $HOME/.vim/plugged/YouCompleteMe
-git submodule update --init --recursive
-./install.py --clang-completer
-cp $ProDir/config/ycm_extra_conf.py ~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf
+# cd $HOME/.vim/plugged
+# git clone https://github.com/Valloric/YouCompleteMe.git
+# cd $HOME/.vim/plugged/YouCompleteMe
+# git submodule update --init --recursive
+# ./install.py --clang-completer
+# cp $ProDir/config/ycm_extra_conf.py ~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf
 # Ctags
 sudo apt-get install -y ctags

@@ -1,3 +1,7 @@
+" 检查状态(check status) :PlugStatus
+" 安装插件(install plug) :PlugInstall
+" 更新插件(update plug) :PlugUpdate
+
 call plug#begin('~/.vim/plugged')
 
 " lean & mean status/tabline for vim that's light as air 
@@ -6,7 +10,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " 代码补全
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 " 文件树
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'

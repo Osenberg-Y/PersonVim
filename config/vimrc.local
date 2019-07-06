@@ -114,21 +114,23 @@ let g:syntastic_style_warning_symbol = '?'
 
 
 " YCM configure
-let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/" ycm/.ycm_extra_conf.py'
 "关闭加载.ycm_extra_conf.py提示
-let g:ycm_confirm_extra_conf=0 
-" C++ 
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
+" let g:ycm_confirm_extra_conf=0 
 " 让YouCompleteMe同时利用原来的ctags
 let g:ycm_collect_identifiers_from_tags_files = 1
 " YCM 代码跳转
-nnoremap <leader>d :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>l :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>i :YcmCompleter GoToInclude<cr>
-nnoremap <leader>f :YcmCompleter FixIt<cr>
+" nnoremap <leader>d :YcmCompleter GoToDefinition<CR>
+" nnoremap <leader>l :YcmCompleter GoToDeclaration<CR>
+" nnoremap <leader>i :YcmCompleter GoToInclude<cr>
+" nnoremap <leader>f :YcmCompleter FixIt<cr>
 " 调出程序错误界面
-map <F4> :YcmDiags<CR>
+" map <F4> :YcmDiags<CR>
+
+" C++ 
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
+
 
 " set taglist
 map <F3> ::TlistToggle<CR>              "按下 F3 调出/隐藏
